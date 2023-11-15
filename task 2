@@ -1,0 +1,20 @@
+import numpy as np
+import math
+import matplotlib.pyplot as plt
+import pandas as pd
+import seaborn as sns
+url = 'https://raw.githubusercontent.com/mwitiderrick/stockprice/master/NSE-TATAGLOBAL.csv'
+data = pd.read_csv(url)
+data
+data.describe()
+data.tail()
+data['High'].hist()
+plt.figure(figsize=(20,8))
+data.plot()
+training_set = data.iloc[:, 1:2].values
+training_set
+data_testing_complete = pd.read_csv(url)
+data_testing_processed = data_testing_complete.iloc[:, 1:2]
+data_testing_processed
+
+
